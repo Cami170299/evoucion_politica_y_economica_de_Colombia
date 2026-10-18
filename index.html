@@ -56,10 +56,19 @@ strong{color:var(--ink)}
 .chart.go .bar{width:var(--w)}
 .bar.a{background:var(--ink2)}.bar.b{background:var(--red)}.bar.c{background:#d89f00;color:#1d2736}
 .src{font-size:.82rem;color:var(--mute);margin-top:10px}
-.vids{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.vid{display:inline-flex;align-items:center;gap:10px;padding:10px 18px 10px 12px;background:#fff;border:2px solid var(--ink);border-radius:999px;text-decoration:none;font:700 .92rem "Bricolage Grotesque",sans-serif;color:var(--ink);transition:background .15s,color .15s}
-.vid:before{content:"\25B6";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;font-size:.7rem;padding-left:2px}
-.vid:hover{background:var(--ink);color:#fff}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:18px}
+.vcard{display:flex;flex-direction:column;background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;border:2px solid transparent;box-shadow:0 1px 0 var(--line);transition:border-color .15s}
+.vcard:hover{border-color:var(--red)}
+.th{position:relative;display:block;aspect-ratio:16/9;background:var(--ink2)}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.th:after{content:"\25B6";position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:.9rem;padding-left:3px}
+.vt{padding:12px 14px 14px;display:block}
+.vt b{display:block;font:700 .95rem/1.25 "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.vt small{display:block;margin-top:6px;color:var(--mute);font-size:.82rem;line-height:1.3}
+.vt em{display:block;margin-top:6px;font-size:.82rem;line-height:1.35;color:var(--text)}
+.refs{max-width:1120px;margin:0 auto;padding:64px 5vw}
+.refs h2{font-size:1.8rem}
+.refs p{padding-left:2em;text-indent:-2em;margin:12px 0;font-size:.95rem;line-height:1.55;overflow-wrap:anywhere}
 .tl{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0}
 .tl span{background:#e5ebf4;border-radius:8px;padding:4px 10px;font:600 .85rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
 footer{background:var(--ink);color:#c9d6ea;padding:48px 6vw;font-size:.95rem}
@@ -83,6 +92,7 @@ footer p{max-width:70ch;margin:6px 0}
   <a href="#apertura">Apertura</a>
   <a href="#siglo21">Siglo XXI</a>
   <a href="#crisis">Crisis 1998-99</a>
+  <a href="#referencias">Referencias</a>
 </nav>
 
 <main>
@@ -98,17 +108,13 @@ footer p{max-width:70ch;margin:6px 0}
       <li><strong>Más Estado financiero:</strong> el Banco de la República recibió el monopolio de la emisión y el control del crédito.</li>
       <li><strong>Empresas estratégicas:</strong> nacen institutos estatales como Ecopetrol.</li>
     </ul>
-    <div class="fix"><strong>Precisión de fecha:</strong> el documento ubica Ecopetrol en 1948. La Ley 165 de 1948 autorizó su creación, pero la empresa se constituyó y empezó a operar en 1951.</div>
+    <div class="fix"><strong>Precisión de fecha:</strong> el documento ubica Ecopetrol en 1948. La Ley 165 de 1948 autorizó su creación, pero la empresa nació en 1951, con la reversión de la Concesión de Mares al Estado (Agencia Nacional de Hidrocarburos, s. f.).</div>
     <div class="more">
       <h3>Para entender mejor</h3>
       <p>La ISI buscaba que el país dejara de ser solo exportador de materias primas. Su costo fue una industria que crecía al abrigo de aranceles y con poca presión para competir. Esa tensión explica por qué, décadas después, la apertura de 1990 fue tan traumática para algunos sectores.</p>
       <div class="tl"><span>1923 Banco de la República</span><span>1927 Federación de Cafeteros</span><span>1944 ANDI</span><span>1951 Ecopetrol</span></div>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=industrializaci%C3%B3n+por+sustituci%C3%B3n+de+importaciones+Colombia">Videos sobre la ISI en Colombia</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=historia+de+Ecopetrol">Historia de Ecopetrol</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=O4VtUFhhNTY"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/O4VtUFhhNTY/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>Modelo de sustitución de importaciones: significado, características y consecuencias</b><small>Historiclases · 21 mar. 2026</small><em>Explica el modelo en general, con ejemplo mexicano; Colombia aplicó la misma lógica.</em></span></a></div></div>
 </section>
 
 <section class="era" id="frente">
@@ -129,11 +135,7 @@ footer p{max-width:70ch;margin:6px 0}
       <h3>Para entender mejor</h3>
       <p>El Frente Nacional se aprobó en el plebiscito de 1957, donde las mujeres votaron por primera vez en un proceso nacional. Rigió con alternancia presidencial y paridad en cargos públicos hasta 1974. Terminó con la violencia entre partidos, pero cerró espacios a terceras fuerzas, algo que se suele citar entre las causas de las guerrillas que surgieron en esos años.</p>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Frente+Nacional+Colombia+historia">El Frente Nacional explicado</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Alianza+para+el+Progreso+Colombia+Kennedy">Alianza para el Progreso</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=xINrmyjkB0I"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/xINrmyjkB0I/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>El Frente Nacional / Ciclo sobre cambio en la historia de Colombia</b><small>Fundación Entrelíneas · 15 oct. 2024</small></span></a><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=hxenDb41myo"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/hxenDb41myo/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>¿Cómo fue el Frente Nacional en Colombia? ¿Era democracia? (1958-1974)</b><small>Daniel Cardona Caicedo · 18 sep. 2025</small></span></a><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TnYTLqhrZEs"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/TnYTLqhrZEs/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>El presidente John F. Kennedy y la Alianza para el Progreso</b><small>Bureau of Western Hemisphere Affairs (EE. UU.) · 19 mar. 2011</small><em>Sobre la Alianza en toda América Latina, con archivo de la Biblioteca Kennedy.</em></span></a></div></div>
 </section>
 
 <section class="era" id="cambiario">
@@ -148,16 +150,12 @@ footer p{max-width:70ch;margin:6px 0}
     </ul>
     <h3>UPAC (gobierno de Misael Pastrana)</h3>
     <p>La Unidad de Poder Adquisitivo Constante buscaba incentivar el ahorro y canalizarlo hacia la construcción y la financiación de vivienda.</p>
-    <div class="fix"><strong>Precisión de fecha:</strong> el documento indica 1970, año en que Pastrana asumió. El sistema UPAC se estableció formalmente en 1972, dentro de su plan de "Las Cuatro Estrategias" (la construcción como motor).</div>
+    <div class="fix"><strong>Precisión de fecha:</strong> el documento indica 1970, año en que Pastrana asumió. El sistema UPAC funcionó entre septiembre de 1972 y diciembre de 1999 (Banco Interamericano de Desarrollo [BID], s. f.).</div>
     <div class="more">
       <h3>Para entender mejor</h3>
       <p>Antes de 1967, las crisis de divisas obligaban a devaluaciones bruscas y a controles improvisados. El nuevo régimen dio previsibilidad a los exportadores. "No tradicionales" significa todo lo que no fuera café, como flores, textiles y manufacturas.</p>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Carlos+Lleras+Restrepo+Decreto+444+1967+estatuto+cambiario">Decreto 444 de 1967</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=qu%C3%A9+fue+el+UPAC+Colombia">¿Qué fue el UPAC?</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=VCrGAE3rVQE"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/VCrGAE3rVQE/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>¿Cómo fue el gobierno de Lleras Restrepo? (1966-1970)</b><small>Daniel Cardona Caicedo · 30 jul. 2025</small><em>Repaso general del gobierno, no solo de la política cambiaria.</em></span></a><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=GXiPxKFKcG8"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/GXiPxKFKcG8/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>El error que casi destruyó Bogotá | La crisis del UPAC y las familias que perdieron todo</b><small>Economia Desclasificada · 10 abr. 2026</small><em>Las imágenes del video son ilustrativas, generadas con IA.</em></span></a></div></div>
 </section>
 
 <section class="era" id="apertura">
@@ -185,11 +183,7 @@ footer p{max-width:70ch;margin:6px 0}
       <h3>Para entender mejor</h3>
       <p>La apertura coincidió con la Constitución de 1991, que además hizo independiente al Banco de la República y declaró a Colombia un Estado social de derecho. Los defensores señalan más competencia y más inversión; los críticos, el golpe a la industria y al agro. En 1992 hubo además un racionamiento eléctrico por sequía que alimentó el debate sobre el sector energético.</p>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=apertura+econ%C3%B3mica+Colombia+1990+Gaviria">La apertura económica</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Ley+100+de+1993+explicada+Colombia">Ley 100 de 1993</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NlWo1s_2zj4"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/NlWo1s_2zj4/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>La historia de la apertura económica de Colombia</b><small>Economía para la pipol · 20 sep. 2026</small><em>Entrevista con Rudolf Hommes, ministro de Hacienda de Gaviria.</em></span></a><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ESJoNlskC8k"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/ESJoNlskC8k/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>¿Qué pasó con la apertura económica? - Ricardo Ávila - #193</b><small>Atemporal con Andrés Acevedo · 24 sep. 2025</small><em>Entrevista con un asesor del gobierno Gaviria.</em></span></a><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=BjTX50LYrEw"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/BjTX50LYrEw/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>“Los mercados globales destruyeron el campo”: 30 años del proceso de apertura económica en Colombia</b><small>ELDIARIO Boyacá · 12 jun. 2020</small><em>Mirada crítica de la apertura.</em></span></a></div></div>
 </section>
 
 <section class="era" id="siglo21">
@@ -200,6 +194,7 @@ footer p{max-width:70ch;margin:6px 0}
     <p>Colombia firmó acuerdos con EE. UU. (vigente desde 2012), Canadá, la Unión Europea y la Alianza del Pacífico.</p>
     <h3>Cambio de la canasta exportadora</h3>
     <p>Tras los descubrimientos de <strong>Caño Limón (1983)</strong> y <strong>Cusiana-Cupiagua (1991)</strong>, el petróleo desplazó al café.</p>
+    <div class="fix"><strong>Precisión de fechas:</strong> el documento usa 1991 para Cusiana-Cupiagua. Las fuentes consultadas ubican el descubrimiento de Cusiana en 1989 y el de Cupiagua en 1993 (Agencia Nacional de Hidrocarburos, s. f.).</div>
     <div class="chart" id="c2">
       <h3>Participación en las exportaciones</h3>
       <div class="row"><span>Petróleo 1990</span><div class="track"><div class="bar a" style="--w:10%">&lt;5%</div></div></div>
@@ -210,13 +205,9 @@ footer p{max-width:70ch;margin:6px 0}
     </div>
     <div class="more">
       <h3>Para entender mejor</h3>
-      <p>El TLC con EE. UU. se firmó en 2006 y entró en vigor en 2012, tras años de debate en el Congreso de ambos países. La dependencia del petróleo dejó una lección: cuando los precios internacionales cayeron en 2014, bajaron las exportaciones, los ingresos fiscales y el valor del peso.</p>
+      <p>El TLC con EE. UU. entró en vigor el 15 de mayo de 2012, tras años de debate en el Congreso de ambos países. La dependencia del petróleo dejó una lección: cuando los precios internacionales cayeron en 2014, bajaron las exportaciones, los ingresos fiscales y el valor del peso.</p>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=TLC+Colombia+Estados+Unidos+explicado">TLC con EE. UU.</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=bonanza+petrolera+Colombia+econom%C3%ADa+Cusiana+Ca%C3%B1o+Lim%C3%B3n">El petróleo y la economía</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=V2TwUqe4JW4"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/V2TwUqe4JW4/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>TLC con Estados Unidos cumple 14 años: balance de inversión, empleo, turismo y más</b><small>Bloomberg Línea · 14 may. 2026</small></span></a></div></div>
 </section>
 
 <section class="era" id="crisis">
@@ -237,19 +228,33 @@ footer p{max-width:70ch;margin:6px 0}
     </ul>
     <div class="more">
       <h3>Para entender mejor</h3>
-      <p>Muchos deudores hipotecarios vieron crecer sus saldos más rápido que sus ingresos y miles perdieron su vivienda. En 1999 la Corte Constitucional declaró inconstitucional la forma de calcular el UPAC, y la Ley 546 de 1999 lo reemplazó por la UVR. Fogafín ya existía desde 1985, pero se reforzó en esta crisis.</p>
+      <p>Muchos deudores hipotecarios vieron crecer sus saldos más rápido que sus ingresos y miles perdieron su vivienda. En septiembre de 1999 la Corte Constitucional declaró inconstitucional el sistema UPAC, y la Ley 546 de 1999 lo reemplazó por la UVR (BID, s. f.). Fogafín ya existía desde 1985, pero se reforzó en esta crisis.</p>
     </div>
-    <div class="vids">
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=crisis+econ%C3%B3mica+Colombia+1999+UPAC">La crisis de 1999</a>
-      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=impuesto+4x1000+origen+historia+Colombia">Origen del 4x1000</a>
-    </div>
-  </div>
+    <div class="vids"><a class="vcard" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=nsKtdD6FFZ0"><span class="th"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/nsKtdD6FFZ0/hqdefault.jpg" onerror="this.remove()"></span><span class="vt"><b>La crisis económica de 1998. Historia de Colombia</b><small>Historia y economía · 23 jul. 2025</small></span></a></div></div>
 </section>
 
 </main>
 
+<section class="refs" id="referencias">
+<h2>Referencias (APA 7)</h2>
+<p>Agencia Nacional de Hidrocarburos. (s. f.). <i>Historia del petróleo en Colombia</i>. https://www.anh.gov.co/es/ambiental-y-social/regionalizaci%C3%B3n/historia-del-petr%C3%B3leo-en-colombia/</p>
+<p>Atemporal con Andrés Acevedo. (2025, 24 de septiembre). <i>¿Qué pasó con la apertura económica? - Ricardo Ávila - #193</i> [Video]. YouTube. https://www.youtube.com/watch?v=ESJoNlskC8k</p>
+<p>Banco de la República. (s. f.). <i>El Frente Nacional</i>. Enciclopedia Banrepcultural. https://enciclopedia.banrepcultural.org/El_Frente_Nacional</p>
+<p>Bloomberg Línea. (2026, 14 de mayo). <i>TLC con Estados Unidos cumple 14 años: balance de inversión, empleo, turismo y más</i> [Video]. YouTube. https://www.youtube.com/watch?v=V2TwUqe4JW4</p>
+<p>Bureau of Western Hemisphere Affairs. (2011, 19 de marzo). <i>El presidente John F. Kennedy y la Alianza para el Progreso</i> [Video]. YouTube. https://www.youtube.com/watch?v=TnYTLqhrZEs</p>
+<p>Daniel Cardona Caicedo. (2025, 30 de julio). <i>¿Cómo fue el gobierno de Lleras Restrepo? ¿El mejor de la historia? ¿Hizo fraude? (1966-1970)</i> [Video]. YouTube. https://www.youtube.com/watch?v=VCrGAE3rVQE</p>
+<p>Daniel Cardona Caicedo. (2025, 18 de septiembre). <i>¿Cómo fue el Frente Nacional en Colombia? ¿Era democracia? (1958-1974)</i> [Video]. YouTube. https://www.youtube.com/watch?v=hxenDb41myo</p>
+<p>Economia Desclasificada. (2026, 10 de abril). <i>El error que casi destruyó Bogotá | La crisis del UPAC y las familias que perdieron todo</i> [Video]. YouTube. https://www.youtube.com/watch?v=GXiPxKFKcG8</p>
+<p>Economía para la pipol. (2026, 20 de septiembre). <i>La historia de la apertura económica de Colombia</i> [Video]. YouTube. https://www.youtube.com/watch?v=NlWo1s_2zj4</p>
+<p>ELDIARIO Boyacá. (2020, 12 de junio). <i>“Los mercados globales destruyeron el campo”: 30 años del proceso de apertura económica en Colombia</i> [Video]. YouTube. https://www.youtube.com/watch?v=BjTX50LYrEw</p>
+<p>Fundación Entrelíneas. (2024, 15 de octubre). <i>El Frente Nacional / Ciclo sobre cambio en la historia de Colombia</i> [Video]. YouTube. https://www.youtube.com/watch?v=xINrmyjkB0I</p>
+<p>Historia Colombiana. (s. f.). <i>Carlos Lleras Restrepo: reformador y presidente de Colombia</i>. https://historiacolombiana.com/personas/carlos-lleras-restrepo</p>
+<p>Historia y economía. (2025, 23 de julio). <i>La crisis económica de 1998. Historia de Colombia</i> [Video]. YouTube. https://www.youtube.com/watch?v=nsKtdD6FFZ0</p>
+<p>Historiclases. (2026, 21 de marzo). <i>Modelo de sustitución de importaciones: significado, características y consecuencias</i> [Video]. YouTube. https://www.youtube.com/watch?v=O4VtUFhhNTY</p>
+<p><i>La crisis de financiamiento hipotecario en Colombia: causas y consecuencias</i>. (s. f.). Banco Interamericano de Desarrollo. https://publications.iadb.org/publications/spanish/document/La-crisis-de-financiamiento-hipotecario-en-Colombia-causas-y-consecuencias.pdf</p>
+</section>
 <footer>
-  <p><strong style="color:#fff">Sobre los videos:</strong> cada botón abre una búsqueda en YouTube sobre el tema, así los enlaces no se rompen si un video se elimina. Elige el que más te sirva.</p>
+  <p>Los datos principales vienen del documento base. Las secciones "Para entender mejor" y las precisiones de fecha son contexto agregado; los datos citados con la Agencia Nacional de Hidrocarburos y el BID se contrastaron con esas fuentes. Las fechas de los videos son las de publicación en YouTube.</p>
 </footer>
 
 <script>
