@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colombia: un siglo de decisiones económicas y políticas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E2A4F;--ink2:#1C3F72;--sun:#F7C51E;--red:#C62F2B;--paper:#F2F5F9;--card:#fff;--text:#1d2736;--mute:#5b6678;--line:#d9e0ea}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font:18px/1.65 "Source Serif 4",Georgia,serif;color:var(--text);background:var(--paper)}
+h1,h2,h3,.sans{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+/* hero: proporciones de la bandera 2:1:1 */
+.hero{display:grid;grid-template-rows:2fr 1fr 1fr;min-height:92vh}
+.hero>div{padding:0 6vw;display:flex;flex-direction:column;justify-content:center}
+.b1{background:var(--sun);color:var(--ink)}
+.b2{background:var(--ink);color:#fff}
+.b3{background:var(--red);color:#fff}
+.hero h1{font-size:clamp(2.4rem,7vw,5.6rem);line-height:1;font-weight:800;letter-spacing:-.03em;max-width:15ch}
+.hero p{max-width:52ch;font-size:1.05rem}
+.b3 p{font-family:"Bricolage Grotesque",sans-serif;font-weight:500}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--ink);display:flex;gap:4px;overflow-x:auto;padding:0 3vw;border-bottom:4px solid var(--sun)}
+nav a{color:#c9d6ea;text-decoration:none;padding:16px 14px;white-space:nowrap;font:600 .9rem "Bricolage Grotesque",sans-serif}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -4px var(--red)}
+/* eras */
+main{max-width:1120px;margin:0 auto;padding:0 5vw}
+.era{display:grid;grid-template-columns:230px 1fr;gap:48px;padding:88px 0;border-bottom:1px solid var(--line)}
+.era:last-of-type{border:0}
+.when{position:sticky;top:90px;align-self:start}
+.when b{display:block;font:800 3rem/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;color:var(--ink)}
+.when span{display:block;margin-top:10px;color:var(--mute);font-size:.95rem;line-height:1.4}
+.when i{display:block;width:56px;height:8px;margin-top:16px;background:var(--sun);border-radius:4px}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:20px}
+h3{font-size:1.05rem;color:var(--ink);margin:26px 0 8px}
+.lead{font-size:1.15rem;margin-bottom:8px}
+ul{padding-left:1.2em}li{margin:8px 0}
+li::marker{color:var(--red)}
+strong{color:var(--ink)}
+.more{margin-top:28px;padding:20px 24px;background:var(--card);border-left:6px solid var(--ink2);border-radius:0 12px 12px 0}
+.more h3{margin-top:0}
+.fix{margin-top:16px;padding:12px 16px;background:#fff6d6;border-left:6px solid var(--sun);border-radius:0 10px 10px 0;font-size:.95rem}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.stat{flex:1 1 150px;padding:16px 18px;background:var(--ink);color:#fff;border-radius:14px}
+.stat b{display:block;font:800 2.1rem/1.1 "Bricolage Grotesque",sans-serif;color:var(--sun)}
+.stat span{font-size:.9rem;line-height:1.3;display:block}
+.chart{margin:24px 0;padding:20px 24px;background:var(--card);border-radius:14px}
+.chart h3{margin:0 0 14px}
+.row{display:grid;grid-template-columns:88px 1fr;align-items:center;gap:12px;margin:8px 0;font:600 .9rem "Bricolage Grotesque",sans-serif}
+.track{background:#e8edf4;border-radius:6px;height:30px}
+.bar{height:100%;width:0;border-radius:6px;color:#fff;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:.85rem;transition:width 1.2s cubic-bezier(.2,.7,.2,1);min-width:0;white-space:nowrap}
+.chart.go .bar{width:var(--w)}
+.bar.a{background:var(--ink2)}.bar.b{background:var(--red)}.bar.c{background:#d89f00;color:#1d2736}
+.src{font-size:.82rem;color:var(--mute);margin-top:10px}
+.vids{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.vid{display:inline-flex;align-items:center;gap:10px;padding:10px 18px 10px 12px;background:#fff;border:2px solid var(--ink);border-radius:999px;text-decoration:none;font:700 .92rem "Bricolage Grotesque",sans-serif;color:var(--ink);transition:background .15s,color .15s}
+.vid:before{content:"\25B6";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;font-size:.7rem;padding-left:2px}
+.vid:hover{background:var(--ink);color:#fff}
+.tl{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0}
+.tl span{background:#e5ebf4;border-radius:8px;padding:4px 10px;font:600 .85rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+footer{background:var(--ink);color:#c9d6ea;padding:48px 6vw;font-size:.95rem}
+footer p{max-width:70ch;margin:6px 0}
+@media(max-width:820px){.era{grid-template-columns:1fr;gap:18px;padding:56px 0}.when{position:static}.when b{font-size:2.3rem}.hero{min-height:80vh}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="b1"><h1>Un siglo de decisiones que hicieron la Colombia de hoy</h1></div>
+  <div class="b2"><p>De la industrialización protegida de los años 40 a la apertura de los 90, los tratados de libre comercio y el auge petrolero.</p></div>
+  <div class="b3"><p>Seis momentos, con datos, contexto y videos para profundizar.</p></div>
+</header>
+
+<nav aria-label="Secciones">
+  <a href="#isi">Industrialización</a>
+  <a href="#frente">Frente Nacional</a>
+  <a href="#cambiario">Estatuto Cambiario</a>
+  <a href="#apertura">Apertura</a>
+  <a href="#siglo21">Siglo XXI</a>
+  <a href="#crisis">Crisis 1998-99</a>
+</nav>
+
+<main>
+
+<section class="era" id="isi">
+  <div class="when"><b>1940-1950</b><span>Industrialización por sustitución de importaciones (ISI)</span><i></i></div>
+  <div>
+    <h2>Producir adentro lo que antes se compraba afuera</h2>
+    <p class="lead">Tras la Segunda Guerra Mundial, y siguiendo las recomendaciones de la CEPAL y de Raúl Prebisch, el Estado impulsó la industria nacional para depender menos de los vaivenes del precio del café.</p>
+    <h3>Cómo se hizo</h3>
+    <ul>
+      <li><strong>Proteccionismo:</strong> barreras arancelarias elevadas para frenar las importaciones.</li>
+      <li><strong>Más Estado financiero:</strong> el Banco de la República recibió el monopolio de la emisión y el control del crédito.</li>
+      <li><strong>Empresas estratégicas:</strong> nacen institutos estatales como Ecopetrol.</li>
+    </ul>
+    <div class="fix"><strong>Precisión de fecha:</strong> el documento ubica Ecopetrol en 1948. La Ley 165 de 1948 autorizó su creación, pero la empresa se constituyó y empezó a operar en 1951.</div>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>La ISI buscaba que el país dejara de ser solo exportador de materias primas. Su costo fue una industria que crecía al abrigo de aranceles y con poca presión para competir. Esa tensión explica por qué, décadas después, la apertura de 1990 fue tan traumática para algunos sectores.</p>
+      <div class="tl"><span>1923 Banco de la República</span><span>1927 Federación de Cafeteros</span><span>1944 ANDI</span><span>1951 Ecopetrol</span></div>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=industrializaci%C3%B3n+por+sustituci%C3%B3n+de+importaciones+Colombia">Videos sobre la ISI en Colombia</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=historia+de+Ecopetrol">Historia de Ecopetrol</a>
+    </div>
+  </div>
+</section>
+
+<section class="era" id="frente">
+  <div class="when"><b>1958-1970</b><span>Frente Nacional y Alianza para el Progreso</span><i></i></div>
+  <div>
+    <h2>Un pacto político y una vitrina de la Guerra Fría</h2>
+    <h3>El Frente Nacional (1958)</h3>
+    <p>Liberales y conservadores acordaron alternarse el poder para restaurar el orden institucional después de La Violencia.</p>
+    <h3>La Alianza para el Progreso (1961)</h3>
+    <p>Colombia fue "vitrina" regional de la ayuda económica de EE. UU. durante la Guerra Fría. Ese papel trajo planeación formal y nuevas instituciones:</p>
+    <ul>
+      <li>Primer Plan General Decenal de Desarrollo.</li>
+      <li>Creación del CONPES y de Planeación Nacional.</li>
+      <li>Reforma agraria y fundación del INCORA (1961).</li>
+      <li>Planificación familiar con PROFAMILIA (1965).</li>
+    </ul>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>El Frente Nacional se aprobó en el plebiscito de 1957, donde las mujeres votaron por primera vez en un proceso nacional. Rigió con alternancia presidencial y paridad en cargos públicos hasta 1974. Terminó con la violencia entre partidos, pero cerró espacios a terceras fuerzas, algo que se suele citar entre las causas de las guerrillas que surgieron en esos años.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Frente+Nacional+Colombia+historia">El Frente Nacional explicado</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Alianza+para+el+Progreso+Colombia+Kennedy">Alianza para el Progreso</a>
+    </div>
+  </div>
+</section>
+
+<section class="era" id="cambiario">
+  <div class="when"><b>1967-1972</b><span>Estatuto Cambiario y creación del UPAC</span><i></i></div>
+  <div>
+    <h2>Exportar más, y ahorrar para construir vivienda</h2>
+    <h3>Decreto Ley 444 de 1967 (Carlos Lleras Restrepo)</h3>
+    <ul>
+      <li>Instituyó la <strong>devaluación gota a gota</strong> (<em>crawling peg</em>): ajustes pequeños y frecuentes del tipo de cambio.</li>
+      <li>Reguló el comercio de divisas.</li>
+      <li>Creó <strong>PROEXPO</strong> y el <strong>Certificado de Abono Tributario (CAT)</strong> para dinamizar las exportaciones no tradicionales.</li>
+    </ul>
+    <h3>UPAC (gobierno de Misael Pastrana)</h3>
+    <p>La Unidad de Poder Adquisitivo Constante buscaba incentivar el ahorro y canalizarlo hacia la construcción y la financiación de vivienda.</p>
+    <div class="fix"><strong>Precisión de fecha:</strong> el documento indica 1970, año en que Pastrana asumió. El sistema UPAC se estableció formalmente en 1972, dentro de su plan de "Las Cuatro Estrategias" (la construcción como motor).</div>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>Antes de 1967, las crisis de divisas obligaban a devaluaciones bruscas y a controles improvisados. El nuevo régimen dio previsibilidad a los exportadores. "No tradicionales" significa todo lo que no fuera café, como flores, textiles y manufacturas.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Carlos+Lleras+Restrepo+Decreto+444+1967+estatuto+cambiario">Decreto 444 de 1967</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=qu%C3%A9+fue+el+UPAC+Colombia">¿Qué fue el UPAC?</a>
+    </div>
+  </div>
+</section>
+
+<section class="era" id="apertura">
+  <div class="when"><b>1990-1993</b><span>Apertura económica y reformas de mercado</span><i></i></div>
+  <div>
+    <h2>Se desmonta la ISI</h2>
+    <p class="lead">Bajo el gobierno de César Gaviria, Colombia redujo drásticamente sus aranceles y eliminó controles directos a las importaciones.</p>
+    <div class="chart" id="c1">
+      <h3>Arancel promedio</h3>
+      <div class="row"><span>1989</span><div class="track"><div class="bar a" style="--w:100%">43,7%</div></div></div>
+      <div class="row"><span>1992</span><div class="track"><div class="bar b" style="--w:26.7%">11,7%</div></div></div>
+    </div>
+    <h3>Apertura financiera y de capitales</h3>
+    <ul>
+      <li>Propiedad extranjera de hasta el 100% en empresas.</li>
+      <li>Fin de las inversiones forzosas del sector bancario.</li>
+      <li>Reestructuración de la banca pública y creación de Bancóldex, Finagro y Findeter.</li>
+    </ul>
+    <h3>Privatizaciones y reforma social (Ley 100 de 1993)</h3>
+    <ul>
+      <li>Entrada del sector privado a pensiones y salud (EPS).</li>
+      <li>Privatización o concesión de servicios públicos: Telecom, energía, gas y agua.</li>
+    </ul>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>La apertura coincidió con la Constitución de 1991, que además hizo independiente al Banco de la República y declaró a Colombia un Estado social de derecho. Los defensores señalan más competencia y más inversión; los críticos, el golpe a la industria y al agro. En 1992 hubo además un racionamiento eléctrico por sequía que alimentó el debate sobre el sector energético.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=apertura+econ%C3%B3mica+Colombia+1990+Gaviria">La apertura económica</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Ley+100+de+1993+explicada+Colombia">Ley 100 de 1993</a>
+    </div>
+  </div>
+</section>
+
+<section class="era" id="siglo21">
+  <div class="when"><b>Siglo XXI</b><span>Tratados de libre comercio y auge petrolero</span><i></i></div>
+  <div>
+    <h2>De exportar café a exportar petróleo</h2>
+    <h3>Tratados de libre comercio</h3>
+    <p>Colombia firmó acuerdos con EE. UU. (vigente desde 2012), Canadá, la Unión Europea y la Alianza del Pacífico.</p>
+    <h3>Cambio de la canasta exportadora</h3>
+    <p>Tras los descubrimientos de <strong>Caño Limón (1983)</strong> y <strong>Cusiana-Cupiagua (1991)</strong>, el petróleo desplazó al café.</p>
+    <div class="chart" id="c2">
+      <h3>Participación en las exportaciones</h3>
+      <div class="row"><span>Petróleo 1990</span><div class="track"><div class="bar a" style="--w:10%">&lt;5%</div></div></div>
+      <div class="row"><span>Petróleo 2014</span><div class="track"><div class="bar b" style="--w:50%">~50%</div></div></div>
+      <div class="row"><span>Café 1990</span><div class="track"><div class="bar c" style="--w:55%">&gt;50%</div></div></div>
+      <div class="row"><span>Café 2014</span><div class="track"><div class="bar c" style="--w:10%">&lt;10%</div></div></div>
+      <p class="src">Barras aproximadas, a partir de las cifras del documento.</p>
+    </div>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>El TLC con EE. UU. se firmó en 2006 y entró en vigor en 2012, tras años de debate en el Congreso de ambos países. La dependencia del petróleo dejó una lección: cuando los precios internacionales cayeron en 2014, bajaron las exportaciones, los ingresos fiscales y el valor del peso.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=TLC+Colombia+Estados+Unidos+explicado">TLC con EE. UU.</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=bonanza+petrolera+Colombia+econom%C3%ADa+Cusiana+Ca%C3%B1o+Lim%C3%B3n">El petróleo y la economía</a>
+    </div>
+  </div>
+</section>
+
+<section class="era" id="crisis">
+  <div class="when"><b>1998-1999</b><span>Crisis financiera de fin de siglo</span><i></i></div>
+  <div>
+    <h2>La peor recesión del siglo</h2>
+    <p class="lead">El colapso del sistema UPAC arrastró a la economía entera.</p>
+    <div class="stats">
+      <div class="stat"><b>-4,2%</b><span>caída del PIB</span></div>
+      <div class="stat"><b>22%</b><span>desempleo</span></div>
+    </div>
+    <h3>La respuesta</h3>
+    <ul>
+      <li>Declaratoria de <strong>emergencia económica</strong>.</li>
+      <li><strong>Fogafín</strong> para respaldar a las entidades financieras.</li>
+      <li>El impuesto del <strong>2x1000</strong>, hoy 4x1000.</li>
+      <li>Adopción del <strong>tipo de cambio totalmente flotante</strong>.</li>
+    </ul>
+    <div class="more">
+      <h3>Para entender mejor</h3>
+      <p>Muchos deudores hipotecarios vieron crecer sus saldos más rápido que sus ingresos y miles perdieron su vivienda. En 1999 la Corte Constitucional declaró inconstitucional la forma de calcular el UPAC, y la Ley 546 de 1999 lo reemplazó por la UVR. Fogafín ya existía desde 1985, pero se reforzó en esta crisis.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=crisis+econ%C3%B3mica+Colombia+1999+UPAC">La crisis de 1999</a>
+      <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=impuesto+4x1000+origen+historia+Colombia">Origen del 4x1000</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong style="color:#fff">Sobre los videos:</strong> cada botón abre una búsqueda en YouTube sobre el tema, así los enlaces no se rompen si un video se elimina. Elige el que más te sirva.</p>
+  <p>Las secciones "Para entender mejor" y las precisiones de fecha son contexto agregado al resumen original.</p>
+</footer>
+
+<script>
+const links=[...document.querySelectorAll("nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.hash==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll(".era").forEach(s=>io.observe(s));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("go");co.unobserve(e.target)}}),{threshold:.4});
+document.querySelectorAll(".chart").forEach(c=>co.observe(c));
+</script>
+</body>
+</html>
